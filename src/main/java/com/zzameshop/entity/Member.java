@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "member")
 @Getter @Setter
 @ToString
-public class Member {
+public class Member extends BaseEntity{
 
     @Id
     @Column(name="member_id")
@@ -30,7 +30,7 @@ public class Member {
     private String address;
 
     @Enumerated(EnumType.STRING) //자바의 enum 타입을 엔티티의 속성으로 지정할 수 있음. Enum을 사용할 때는 기본적으로 순서가 저장되는데,
-    //enum의 순서가 바뀔 경우 문제가 발생할 수 있으므로, 'Enumtype.STRING' 옵션을 사용해 STRING으로 저장하기를 권장함.
+    //enum의 순서가 바뀔 경우 문제가 발생할 수 있으므로, 'EnumType.STRING' 옵션을 사용해 STRING으로 저장하기를 권장함.
     private Role role;
 
     public static Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder) {
