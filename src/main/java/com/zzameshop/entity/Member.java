@@ -39,7 +39,7 @@ public class Member extends BaseEntity{
         member.setName(memberFormDto.getName());
         member.setEmail(memberFormDto.getEmail());
         member.setAddress(memberFormDto.getAddress());
-        member.setRole(Role.USER);
+        member.setRole(Role.ADMIN);
         String password = passwordEncoder.encode(memberFormDto.getPassword());
         //스프링 시큐리티 설정 클래스에 등록한 BCyptPasswordEncoder Bean을 파라미터로 넘겨서 비밀번호를 암호화 함.
         member.setPassword(password);
