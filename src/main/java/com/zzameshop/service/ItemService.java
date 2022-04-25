@@ -16,9 +16,11 @@ import com.zzameshop.dto.ItemImgDto;
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 
+import com.zzameshop.dto.ItemSearchDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import com.zzameshop.dto.MainItemDto;
 
 @Service
 @Transactional
@@ -43,9 +45,9 @@ public class ItemService {
             itemImg.setItem(item);
 
             if(i == 0)
-                itemImg.setRepImgYn("Y");
+                itemImg.setRepimgYn("Y");
             else
-                itemImg.setRepImgYn("N");
+                itemImg.setRepimgYn("N");
 
             itemImgService.saveItemImg(itemImg, itemImgFileList.get(i));
         }
@@ -54,7 +56,7 @@ public class ItemService {
     }
 
     @Transactional(readOnly = true)
-    public ItemFormDto getItemDtl(Long itemId) {
+    public ItemFormDto getItemDtl(Long itemId){
         List<ItemImg> itemImgList = itemImgRepository.findByItemIdOrderByIdAsc(itemId);
         List<ItemImgDto> itemImgDtoList = new ArrayList<>();
         for (ItemImg itemImg : itemImgList) {
@@ -66,7 +68,6 @@ public class ItemService {
                 .orElseThrow(EntityNotFoundException::new);
         ItemFormDto itemFormDto = ItemFormDto.of(item);
         itemFormDto.setItemImgDtoList(itemImgDtoList);
-
         return itemFormDto;
     }
 
@@ -86,6 +87,14 @@ public class ItemService {
         return item.getId();
     }
 
+    @Transactional(readOnly = true)
+    public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable){
+        return itemRepository.getAdminItemPage(itemSearchDto, pageable);
+    }
 
+    @Transactional(readOnly = true)
+    public Page<MainItemDto> getMainItemPage(ItemSearchDto itemSearchDto, Pageable pageable){
+        return itemRepository.getMainItemPage(itemSearchDto, pageable);
+    }
 
 }

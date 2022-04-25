@@ -60,7 +60,7 @@ class OrderTest {
             OrderItem orderItem = new OrderItem();
             orderItem.setItem(item);
             orderItem.setCount(10);
-            orderItem.setOderPrice(1_000);
+            orderItem.setOrderPrice(1_000);
             orderItem.setOrder(order);
             order.getOrderItems().add(orderItem);
         }
