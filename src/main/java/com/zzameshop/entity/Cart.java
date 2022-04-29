@@ -3,15 +3,13 @@ package com.zzameshop.entity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.annotations.GeneratorType;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "cart")
 @Getter @Setter
 @ToString
-public class Cart extends BaseEntity{
+public class Cart extends BaseEntity {
 
     @Id
     @Column(name = "cart_id")
@@ -19,6 +17,7 @@ public class Cart extends BaseEntity{
     private Long id;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name="member_id")
     private Member member;
+
 }

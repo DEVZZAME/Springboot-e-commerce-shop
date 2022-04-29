@@ -17,7 +17,6 @@
 
     <script th:inline="javascript">
         $(document).ready(function(){
-/*회원가입에 실패했을 경우 에러메세지를 출력함*/
             var errorMessage = [[${errorMessage}]];
             if(errorMessage != null){
                 alert(errorMessage);
@@ -54,8 +53,6 @@
             <button type="submit" class="btn btn-primary" style="">Submit</button>
         </div>
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
-<!--    스프링 시큐리티를 사용할 경우 기본적으로 CSRF를 방어하기 위해 모든 POST 데이터 전송방식에는 CSRF 토큰값이 있어야 함.
-    CSRF는 실제 서버에서 요청한 전송이 맞는지 확인하기 위해 사용되는 토큰이다. -->
     </form>
 
 </div>
