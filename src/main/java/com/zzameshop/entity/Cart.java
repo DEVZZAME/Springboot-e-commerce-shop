@@ -20,8 +20,8 @@ public class Cart extends BaseEntity {
     @JoinColumn(name="member_id")
     private Member member;
 
-    public static Cart createCart(Member member) {
-        Cart cart = new Cart();
+    public static com.zzameshop.entity.Cart createCart(Member member){
+        com.zzameshop.entity.Cart cart = new com.zzameshop.entity.Cart();
         cart.setMember(member);
         return cart;
     }
