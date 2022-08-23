@@ -104,8 +104,8 @@ public class CartService {
 
         for (CartOrderDto cartOrderDto : cartOrderDtoList) {
             CartItem cartItem = cartItemRepository
-                    .findById(cartOrderDto.getCartItemId())
-                    .orElseThrow(EntityNotFoundException::new);
+                            .findById(cartOrderDto.getCartItemId())
+                            .orElseThrow(EntityNotFoundException::new);
 
             OrderDto orderDto = new OrderDto();
             orderDto.setItemId(cartItem.getItem().getId());
@@ -116,8 +116,8 @@ public class CartService {
         Long orderId = orderService.orders(orderDtoList, email);
         for (CartOrderDto cartOrderDto : cartOrderDtoList) {
             CartItem cartItem = cartItemRepository
-                    .findById(cartOrderDto.getCartItemId())
-                    .orElseThrow(EntityNotFoundException::new);
+                            .findById(cartOrderDto.getCartItemId())
+                            .orElseThrow(EntityNotFoundException::new);
             cartItemRepository.delete(cartItem);
         }
 

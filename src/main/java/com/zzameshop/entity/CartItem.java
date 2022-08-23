@@ -24,8 +24,8 @@ public class CartItem extends BaseEntity {
 
     private int count;
 
-    public static com.zzameshop.entity.CartItem createCartItem(Cart cart, Item item, int count) {
-        com.zzameshop.entity.CartItem cartItem = new com.zzameshop.entity.CartItem();
+    public static CartItem createCartItem(Cart cart, Item item, int count) {
+        CartItem cartItem = new CartItem();
         cartItem.setCart(cart);
         cartItem.setItem(item);
         cartItem.setCount(count);

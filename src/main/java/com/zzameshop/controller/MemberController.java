@@ -1,6 +1,7 @@
 package com.zzameshop.controller;
 
 import com.zzameshop.dto.MemberFormDto;
+import com.zzameshop.entity.Member;
 import com.zzameshop.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -8,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.zzameshop.entity.Member;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 

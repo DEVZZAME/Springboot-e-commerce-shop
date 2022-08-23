@@ -1,5 +1,6 @@
 package com.zzameshop.controller;
 
+import com.zzameshop.entity.Item;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -19,7 +20,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import javax.persistence.EntityNotFoundException;
 
 import com.zzameshop.dto.ItemSearchDto;
-import com.zzameshop.entity.Item;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

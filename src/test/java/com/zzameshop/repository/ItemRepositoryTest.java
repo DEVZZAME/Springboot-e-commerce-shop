@@ -21,8 +21,6 @@ import javax.persistence.PersistenceContext;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest//통합 테스트를 위해 스프링 부트에서 제공하는 어노테이션. 실제 애플리케이션을 구동할 때처럼 모든 Bean을 IoC 컨테이너에 등록함. 애플리케이션의 규모가 크면 속도가 느려질 수도 있음
 @TestPropertySource(locations = "classpath:application-test.properties")//테스트 코드 실행 시 application.properties에 설정해둔 값말고
 // application-test.properties에 같은 설정이 있다면 더 높은 우선순위를 부여함. 기존에는 MySQL을 사용했지만 테스트 코드 실행 시에는 H2 데이터베이스를 사용하게 됨.
