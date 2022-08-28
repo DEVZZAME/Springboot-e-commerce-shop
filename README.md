@@ -40,7 +40,7 @@
 
 # Views
 
-- **메인**
+- **회원가입 및 메인**
 
   <p align="center"><img src="https://github.com/DEVZZAME/zzameshop/blob/master/01.gif?raw=true"/></p>
 
@@ -48,17 +48,25 @@
 
 
 
-- **상품 카테고리** 
+- **상품 관리** 
 
-  <p align="center"><img src="https://github.com/77kkyu/Style_Is_You/blob/master/src/main/webapp/file/stu_cate.gif?raw=true"/></p>
-
-
+<p align="center"><img src="https://github.com/DEVZZAME/zzameshop/blob/master/02.gif?raw=true"/></p>
 
 
 
-- **상품 상세**
 
-  <p align="center"><img src="https://github.com/77kkyu/Style_Is_You/blob/master/src/main/webapp/file/stu_detail.gif?raw=true"/></p>
+
+- **상품 등록**
+
+<p align="center"><img src="https://github.com/DEVZZAME/zzameshop/blob/master/03.gif?raw=true"/></p>
+
+
+
+
+
+- **장바구니 및 로그아웃**
+
+<p align="center"><img src="https://github.com/DEVZZAME/zzameshop/blob/master/04.gif?raw=true"/></p>
 
 
 
