@@ -3,8 +3,6 @@
 이커머스를 활용하여 제작된 글로세리 쇼핑몰입니다.
 
 
-
-
 # Description
 
 - 개발 기간: 2022.03.20 ~ 2022.05.10 (약 8주)
@@ -35,6 +33,32 @@
   - 상품 구매이력 페이지 구현(주문일시, 페이징, 주문취소)
 
   - GitHub 레포지토리 전체 관리
+
+
+# Spring Boot(API Server)
+### JSP(MAP)에서 Data Request → JSON으로 Response
+> 
+- config : project configurations 관리
+- domain : DB에서 Table과 Mapping
+- handler : custom exception message 관리, aop를 이용해 validation
+- service : business logic 처리
+- util : 공통응답을 위한 util 기능 관리
+- web
+    - dto : 일반적인 request/response dto와 공통응답을 위한 dto를 관리
+    - api : data를 응답할 controller를 관리
+
+
+# JPA+QLRM(ORM)
+### 반복적인 CRUD 작성과 쿼리 작성을 자동화
+> 
+- JPA : 반복적인 CRUD 작업을 대체해 간단히 DB에서 데이터를 조회
+- QLRM : JPA Native Query 결과값을 Entity가 아닌 특정 DTO로 매핑
+
+# OAuth2.0(Login)
+### HTTP Session을 통한 소셜 로그인
+> 
+- oauth2Login() : ouath2 로그인이 가능하도록 처리
+- userInfoEndPoint() : 인증에 성공하면 oAuth2DetailsService에서 해당 USER 정보에 대해서 후처리
 
     
 
@@ -72,15 +96,5 @@
 
 
 
-# Spring Boot(API Server)
-### JSP(MAP)에서 Data Request → JSON으로 Response
-> 
-- config : project configurations 관리
-- domain : DB에서 Table과 Mapping
-- handler : custom exception message 관리, aop를 이용해 validation
-- service : business logic 처리
-- util : 공통응답을 위한 util 기능 관리
-- web
-    - dto : 일반적인 request/response dto와 공통응답을 위한 dto를 관리
-    - api : data를 응답할 controller를 관리
+
 
