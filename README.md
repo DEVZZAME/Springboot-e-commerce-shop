@@ -73,10 +73,7 @@
 
 
 # Spring Boot(API Server)
-
----
-
-> JSP(MAP)에서 요청한 데이터를 JSON으로 response 합니다.
+###JSP(MAP)에서 요청한 데이터를 JSON으로 response 합니다.
 > 
 - config : project configurations를 관리 합니다.
 - domain : 실제 DB에서 테이블과 매핑 합니다.
