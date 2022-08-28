@@ -73,14 +73,14 @@
 
 
 # Spring Boot(API Server)
-###JSP(MAP)에서 요청한 데이터를 JSON으로 response 합니다.
+### JSP(MAP)에서 Data Request → JSON으로 Response
 > 
-- config : project configurations를 관리 합니다.
-- domain : 실제 DB에서 테이블과 매핑 합니다.
-- handler : custom exception message를 관리하고 aop를 이용해 validation 검사를 자동화 합니다.
-- service : business logic 처리 합니다.
-- util : 공통응답을 위한 util 기능들을 관리 합니다.
+- config : project configurations 관리
+- domain : DB에서 Table과 Mapping
+- handler : custom exception message 관리, aop를 이용해 validation
+- service : business logic 처리
+- util : 공통응답을 위한 util 기능 관리
 - web
-    - dto : 일반적인 request/response dto와 공통응답을 위한 dto를 관리 합니다.
-    - api : data를 응답할 controller를 관리 합니다.
+    - dto : 일반적인 request/response dto와 공통응답을 위한 dto를 관리
+    - api : data를 응답할 controller를 관리
 
